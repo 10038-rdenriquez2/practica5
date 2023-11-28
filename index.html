@@ -1,0 +1,46 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Components Example</title>
+</head>
+<body>
+
+  <!-- <script type="module" src="header-component.html"></script> -->
+  <div>
+    <h1>¡Mi Aplicación Modular!</h1>
+  </div>
+  <!-- <script type="module" src="list-component.html"></script> -->
+  <ul>
+    <slot name="list-item"></slot>
+  </ul>
+  <!-- <script type="module" src="form-component.html"></script> -->
+  <form>
+    <slot name="form-input"></slot>
+    <button type="submit">Enviar</button>
+  </form>
+  <!-- <script type="module" src="container-component.html"></script> -->
+  <div>
+  <!-- <header-component></header-component> -->
+
+    <div>
+      <list-component>
+        <span slot="list-item">Elemento 1</span>
+        <span slot="list-item">Elemento 2</span>
+        <span slot="list-item">Elemento 3</span>
+      </list-component>
+
+      <form-component>
+        <input slot="form-input" type="text" placeholder="Ingrese algo">
+      </form-component>
+    </div>
+  </div>
+
+
+  <container-component></container-component>
+
+</body>
+</html>
